@@ -1,0 +1,312 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height:50px;
+    gap: 60px;
+    background-color:#673147;
+    padding: 10px;
+}
+
+.nav .fa-bars{
+    margin-right:auto;
+    transition: transform 0.6s ease;
+
+}
+
+.nav .fa-bars:hover{
+    transform: rotate(360deg);
+    color:white;
+}
+
+.nav a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    gap: 10px;
+}
+
+.nav a:hover{
+    color:white;
+}
+
+.hero-section{
+    background-image: url("hero-image.jpg");
+    background-size:cover;
+    background-position:center;
+    padding:15px;
+    height: 85vh;
+    width: 100%;
+    font-weight: 700;
+}
+
+.hero-section h1{
+    color:rgb(0, 0, 0);
+    font-family:carattere, cursive;
+    font-weight:500;
+    font-size:70px;
+
+    padding-top:50px;
+    padding-left:20px;
+}
+
+.hero-section h1 span{
+    color:#811331;
+}
+
+.hero-section h2{
+    font-weight:200;
+    padding-top:20px;
+    padding-bottom:10px;
+    padding-left:20px;
+}
+
+
+.info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    width:400px;
+    padding:10px;
+}
+
+.first{
+    height:35px;
+    border-radius: 30px;
+    border: white;
+    padding:6px;
+}
+
+.second{
+    height:35px;
+    width:350px;
+    border-radius: 30px;
+    border: white;
+    padding:6px;
+
+}
+
+input::placeholder{
+    text-align:center;
+    color:#811331;
+}
+
+.btn{
+    padding:15px;
+}
+
+button{
+    height:40px;
+    width:350px;
+    border-radius:10px;
+    background-color:#D9A6A9;
+    border:black;
+}
+
+.invite-card{
+    background-color:rgb(236, 225, 226);
+    padding: 60px 0;
+}
+
+.invite-card h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: rgb(99, 3, 19);
+    padding-bottom: 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.offer{
+    background-image: url("cat.png");
+    background-size:cover;
+    background-position:center;
+
+    height: 450px;
+    width: 85%;
+    margin: 0px auto;
+    border-radius: 13px;
+
+    display:flex;
+}
+
+.right-section{
+    width:40%;
+    margin-left:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    
+}
+
+.right-section h1,p{
+    padding:6px;
+}
+
+.right-section span{
+    color: rgb(182, 159, 129);
+}
+
+.right-section h1{
+    font-family:carattere, cursive;
+    font-weight:200;
+    font-size: 60px;
+    color:rgb(226, 210, 189);
+}
+
+.membership-heading {
+    position: relative;
+}
+
+.membership-heading h1{
+    background-color:rgb(236, 225, 226);
+    font-family:carattere, cursive;
+    font-weight: 400;
+    font-size:60px;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding: 30px 30px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.membership-heading h1:hover{
+    color:#61bd0c;
+}
+
+/* Trinkets: hidden by default */
+.trinket {
+    position: absolute;
+    font-size: 32px;
+    opacity: 0;
+    transform: translateY(15px) scale(0.5) rotate(0deg);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* so they never block the hover */
+    z-index: 2;
+}
+
+/* Reveal on h1 hover (sibling selector) */
+.membership-heading h1:hover ~ .trinket {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(15deg);
+}
+
+/* Positions + staggered delays */
+.t1 { top: 15%; left: 15%;  transition-delay: 0s; }
+.t2 { top: 75%; left: 25%; transition-delay: 0.05s; }
+.t3 { top: 10%; right: 20%; transition-delay: 0.1s; }
+.t4 { top: 70%; right: 18%; transition-delay: 0.15s; }
+.t5 { top: -2%;  left: 48%; transition-delay: 0.2s; }
+
+@keyframes float {
+    0%, 100% { margin-top: 0; }
+    50%      { margin-top: -8px; }
+}
+
+.membership-heading h1:hover ~ .trinket {
+    animation: float 2s ease-in-out infinite;
+}
+
+
+.membership-card{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:65px;
+    padding:50px 0;
+
+    background-color:rgb(236, 225, 226);
+}
+
+
+
+.card{
+    width: 290px;
+    border:1px solid black;
+    padding:25px;
+    border-radius:13px;
+
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgb(207, 160, 30);
+}
+
+
+ul {
+    border-top: 1px solid grey;
+    padding-top: 15px;
+}
+
+.membership-link{
+    padding-top:15px;
+}
+
+.membership-link a{
+    text-decoration:none;
+}
+
+
+.first-membership-heading{
+    color:rgb(122, 16, 82);
+
+}
+
+.second-membership-heading{
+    color:#003153;
+}
+
+.third-membership-heading{
+    color: #b91004;
+}
+
+.payment .span1{
+    color:rgb(122, 16, 82)
+}
+
+.payment .span2{
+    color:#003153;
+}
+
+.payment .span3{
+    color:#b91004;
+}
+
+.first-membership-link{
+    color:rgb(122, 16, 82);
+}
+
+.second-membership-link{
+    color:#003153;
+}
+
+.third-membership-link{
+    color:#b91004;
+}
+
+footer{
+    padding-top:20px;
+    border:1px solid grey;
+}
+
+
+
+
+
+
